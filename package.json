@@ -1,0 +1,28 @@
+{
+  "name": "cobaserver",
+  "version": "0.0.0",
+  "private": true,
+  "scripts": {
+    "start": "node ./bin/www",
+    "dev": "nodemon ./bin/www",
+    "knex": "knex",
+    "configure": "dropdb --if-exist",
+    "test": "./node_modules/.bin/env-cmd -x dropdb -U $PGUSER -W --if-exists $PGDB",
+    "sd": "dropdb --if-exist jubelio && createdb jubelio && knex migrate:latest",
+    "coba": "./configure.sh"
+  },
+  "dependencies": {
+    "cookie-parser": "~1.4.4",
+    "debug": "~2.6.9",
+    "dotenv": "^10.0.0",
+    "env-cmd": "^10.1.0",
+    "express": "~4.16.1",
+    "http-errors": "~1.6.3",
+    "knex": "^0.95.11",
+    "morgan": "~1.9.1",
+    "pg": "^8.7.1"
+  },
+  "devDependencies": {
+    "nodemon": "^2.0.13"
+  }
+}
