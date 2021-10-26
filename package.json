@@ -9,7 +9,7 @@
     "configure": "dropdb --if-exist",
     "test": "./node_modules/.bin/env-cmd -x dropdb -U $PGUSER -W --if-exists $PGDB",
     "sd": "dropdb --if-exist jubelio && createdb jubelio && knex migrate:latest",
-    "coba": "./configure.sh"
+    "coba": "configure.sh"
   },
   "dependencies": {
     "cookie-parser": "~1.4.4",
